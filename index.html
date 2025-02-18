@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zulueta Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" type="image/png" href="Images/tab_photo.jpg">
+</head>
+<body>
+
+    <div class="side">
+        <h2>About Me</h2>
+        <img src="Images/ProfilePicture.jpg" alt="Profile Picture" class="ProPic">
+        <h3>Name:</h3>
+        <p>Shaira Jalaine Viray Zulueta</p>
+        <h3>Age:</h3>
+        <p>19 Years Old</p>
+        <h3>Birthdate:</h3>
+        <p>July 26, 2005</p>
+        <a href="Images/Resume.jpg" download target="_blank" style="color: #264170">Click to view Resume</a>
+    </div>
+
+    <div class="main-content" id="main-content">
+        <header>
+            <nav>
+                <button onclick="changeContent('interest')">Interest</button>
+                <button onclick="changeContent('education')">Education</button>
+                <button onclick="changeContent('works')">Works</button>
+                <button onclick="changeContent('achievements')">Achievements</button>
+                <button onclick="changeContent('contacts')">Contacts</button>
+            </nav>
+        </header>
+
+        <h1>Welcome to my Personal Portfolio!</h1>
+    </div>
+
+    <script>
+        function changeContent(section) {
+            const mainContent = document.getElementById('main-content');
+            
+            const content = {
+                interest: {
+                    html: `<h1>My Hobbies and Interests</h1>
+                           <h3>Hobbies:</h3>
+                           <ul>
+                                <li>Sleeping💤</li>
+                                <li>Watching vids on tiktok and reels📱</li>
+                                <li>Reading Manga and Manhwa📖</li>
+                                <li>Taking naps💤</li>
+                                <li>Talking with meowmeow💙💙💙</li>
+                            </ul>
+                            <h3>Interest:</h3>
+                            <ul>
+                                <li>💙💙💙meowmeow💙💙💙</li>
+                                <li>Cats🐈</li>
+                                <li>Chika🗣️🦻🏼</li>
+                                <li>Nature⛰️</li>
+                                <li>Beach🏝️</li>
+                            </ul>`,
+                    className: "interest"
+
+                },
+
+                education: {
+                    html: `<h1>Educational Background</h1>
+                            <h4>Elementary School:</h4>
+                            <p>Central Pangasinan Adventist School - 2011 - 2017</p>
+                            <h4>Junior Highschool:</h4>
+                            <p>Central Pangasinan Adventist School - 2017 - 2021</p>
+                            <h4>Senior Highschool:</h4>
+                            <p>STI College Dagupan - 2021 - 2023</p>
+                            <p>ICT - Mobile App and Web Development Track</p>
+                            <h4>College:</h4>
+                            <p>University of the Cordilleras - 2023 - 202X</p>
+                            <p>BSIT - Network and Security Track (current track)</p>
+                            <p>(former track) Web Technology Track</p>`,
+                    className: "education"
+                },
+                works: {
+                    html: `<h1>My Works</h1>
+                           <p>Here are some of my projects.</p>
+                           
+                           <div class="works-section">
+                               <h4>Photographs:</h4>
+                               <div>
+                                   <a href="Images/Photography1.jpg" target="_blank">
+                                       <img src="Images/Photography1.jpg" alt="Liz&Lex">
+                                   </a>
+                                   <a href="Images/Photography2.jpg" target="_blank">
+                                       <img src="Images/Photography2.jpg" alt="Creekie">
+                                   </a>
+                                   <a href="Images/Photography3.jpg" target="_blank">
+                                       <img src="Images/Photography3.jpg" alt="Meowie">
+                                   </a>
+                                   <a href="Images/Photography4.jpg" target="_blank">
+                                       <img src="Images/Photography4.jpg" alt="Kei">
+                                   </a>
+                               </div>
+                               <div>
+                                   <a href="Images/Photography5.jpg" target="_blank">
+                                       <img src="Images/Photography5.jpg" alt="Aguilar Sunrise">
+                                   </a>
+                                   <a href="Images/Photography6.jpg" target="_blank">
+                                       <img src="Images/Photography6.jpg" alt="Aguilar View">
+                                   </a>
+                                   <a href="Images/Photography7.jpg" target="_blank">
+                                       <img src="Images/Photography7.jpg" alt="Bolinao Beach">
+                                   </a>
+                               </div>
+                           </div>
+                           
+                           <div class="works-section">
+                               <h4>Sample Programs</h4>
+                               <div class="programs">
+                                   <img src="Images/SamProg1.PNG" alt="Hello World!">
+                                   <img src="Images/SamProg2.PNG" alt="String Input Prompt">
+                                   <img src="Images/SamProg3.PNG" alt="Dates">
+                                   <img src="Images/SamProg4.PNG" alt="Int Input Prompt">
+                               </div>
+                           </div>
+                
+                           <div class="works-section">
+                               <h4>File Compilations</h4>
+                               <div class="files">
+                                   <img src="Images/Works1.PNG" alt="Screenshot 1">
+                                   <img src="Images/Works2.PNG" alt="Screenshot 2">
+                                   <img src="Images/Works3.PNG" alt="Screenshot 3">
+                               </div>
+                           </div>`,
+                    className: "works"
+                
+                
+                
+                },
+                achievements: {
+                    html: `<h1>My Achievements</h1>
+                           <div class = "achievement_img">
+                                <img src = "Images/Achievements1.png" alt = "Doodle Making" height = "180px">
+                                <img src = "Images/Achievements2.png" alt = "2nd Place Choir" height = "180px">
+                                <img src = "Images/Achievements3.jpg" alt = "Honors" height = "180px>
+                           </div>
+                           <div class = "achievement2">
+                                <img src = "Images/Achievements4.jpg" alt = "Achievement4" height = "180px">
+                                <img src = "Images/Certificate1.jpg" alt = "Completion of Work Immersion" height = "180px">
+                                <img src = "Images/Certificate2.jpg" alt = "Best in Film Editing" height = "180px">
+                           </div>`,
+                    className: "achievements"
+                },
+                contacts: {
+                    html: `<h1>Contacts</h1>
+                           <h3>Emails:</h3>
+                           <p>zuluetashairajalaine@gmail.com</p>
+                           <p>svz6291@students.uc-bcf.edu.ph</p>
+                           <h3>Contact Number:</h3>
+                           <p>09693030683</p>
+                           <h3>My Social Media Accounts: </h3>
+                           <div class = socials>
+                                <a href = "https://www.facebook.com/shairajalaine.zulueta.1" target="_blank">
+                                    <img src = "Images/Facebook_Icon.png" alt = "Facebook" class = "FacebookImg">
+                                </a>
+                                <a href = "https://www.instagram.com/_sshazuu/" target="_blank">
+                                    <img src = "Images/Instagram_Icon.png" alt = "Instagram" class = "InstagramImg">
+                                </a>
+                                <a href = "Images/tiktok.html" target="_blank">
+                                    <img src = "Images/TikTok_Icon.png" alt = "TikTok" class = "TikTokImg">
+                                </a>    
+                            </div> `,
+                    className: "contacts"
+                }
+            };
+
+            if (content[section]) {
+                mainContent.innerHTML = `<header>
+                                            <nav>
+                                                <button onclick="changeContent('interest')">Interest</button>
+                                                <button onclick="changeContent('education')">Education</button>
+                                                <button onclick="changeContent('works')">Works</button>
+                                                <button onclick="changeContent('achievements')">Achievements</button>
+                                                <button onclick="changeContent('contacts')">Contacts</button>
+                                            </nav>
+                                         </header>` + content[section].html; 
+                mainContent.className = "main-content " + content[section].className;
+            }
+        }
+    </script>
+</body>
+</html>
